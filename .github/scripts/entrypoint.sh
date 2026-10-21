@@ -1,11 +1,11 @@
 #!/bin/bash
-set -e
 
-FILE=${FILE:-data.txt}
+echo "Starting Frequency Analyzer..."
 
-echo "Starting vowel frequency analyzer on $FILE..."
-FREQ_RESULT=$(python /app/.github/scripts/frequency.py "$FILE")
-echo "Result: $FREQ_RESULT"
+# Running the Python frequency analyzer
+FREQ_RESULT=$(python3 /app/.github/scripts/frequency.py /app/data.txt)
 
+# Running update_readme.sh
 bash /app/.github/scripts/update_readme.sh "$FREQ_RESULT" "$GITHUB_USER"
-echo "README.md updated successfully"
+
+echo "Process Completed!"
