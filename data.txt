@@ -1,0 +1,2 @@
+The quick brown fox jumps over the lazy dog.
+GitHub Actions can run custom Docker containers to automate repository tasks.
